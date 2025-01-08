@@ -3,13 +3,19 @@ This repository contains the scripts used to collect and a language-specific cor
 
 ## Dependencies
 You will need the following packages included in the [Anaconda distribuation]():
+
 -[SciPy](https://scipy.org/)
+
 -[NumPy](https://numpy.org/)
+
 -[pandas](https://pandas.pydata.org/)
+
 -[matplotlib](https://matplotlib.org/)
 
 You will also need these packages which are not included in Anaconda:
+
 -[Nilearn](https://nilearn.github.io/stable/index.html)
+
 -[pubget](https://neuroquery.github.io/pubget/pubget.html)
 
 The code is written in blocks for the Spyder IDE.
