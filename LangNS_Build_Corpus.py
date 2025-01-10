@@ -97,7 +97,7 @@ for i in exceptions:
     vocab2.append(i)
 g.close()
 
-# Pick out terms of interest (comment out for longer list in vocab_new.csv)
+# Pick out terms of interest
 f = open('scripts/interest_terms_tmp.txt','r')
 terms = [i[:-1] for i in f]
 f.close()
@@ -121,6 +121,12 @@ for Idx,i in enumerate(vocab3):
     if v[:-1] in words3:
         if v[-1] == 's' and not v not in ['passive sentences','passives','actives','active sentences']:
             mapping = mapping + lns.makemap(v,v[:-1])
+
+'''
+Dictionary of vocabulary mappings
+Dict keys will be kept in vocabulary
+All terms in the list entry for each key will be mapped to that key in the vocabulary 
+'''
 
 manual_maps = {'adverb':['adv','adverbial'],
                'agrammatic':['agrammatic aphasia'],
@@ -172,7 +178,7 @@ manual_maps = {'adverb':['adv','adverbial'],
                'go nogo':['nogo go'],
                'grammatical':['syntactical'],
                'grapheme phoneme':['graphemes phonemes','phoneme grapheme'],
-               'harmonic':['harmonized','harmony'], 
+               'harmonic':['harmonized','harmony'],
                'hierarchical organization':['hierarchically organized'],
                'hierarchical structure':['tree structure'],
                'hippocampus':['hippocampal','hippocampi'],
@@ -298,7 +304,7 @@ manual_maps = {'adverb':['adv','adverbial'],
                'syllabic structure':['syllabification'],
                'synonym judgment':['synonym judgement'],
                'syntactic':['syntax','syntactically','grammatically'],
-               'syntactic category':['grammatical categories','grammatical category','grammatical class','part speech'],
+               'syntactic category':['grammatical categories','grammatical category','grammatical class'],
                'syntactic complexity':['syntactically complex','complexity sentences','sentence complexity'],
                'syntactic dependencies':['local dependencies','distance dependencies','dependency structure'],
                'syntactic processing':['syntactic processes','grammatical processing','grammar processing','processing syntactic','processing syntactically','processing syntax'],
@@ -312,7 +318,7 @@ manual_maps = {'adverb':['adv','adverbial'],
                'tone':['tonal'],
                'tone processing':['processing tone','processing tonal','tone perception'],
                'transition probability':['transition probabilities'],
-               'transitive sentences':['transitive verb','transitivity','transitive'], # 'intransitive verb','transitive intransitive',
+               'transitive sentences':['transitive verb','transitivity','transitive','verb object'], # 'intransitive verb','transitive intransitive',
                'unambiguous':['unambiguously'],
                'ungrammatical':['syntactic violation'],
                'valence':['valenced'],
@@ -339,7 +345,7 @@ manual_maps = {'adverb':['adv','adverbial'],
                'word length':['words length','length word'],
                'word production':['production word'],
                'working memory':['wm working'],
-                'past tense':['past future','past present','present past','present tense','present future','future present','tense form','tense verb'],
+                # 'past tense':['past future','past present','present past','present tense','present future','future present','tense form','tense verb'],
                 'embedded sentence':['embedded clause','subordinate clause'],
                 'relative clause':['subject relative','object extracted','subject extracted','extracted relative']
                 # 'object relative':['subject relative','object extracted','subject extracted','extracted relative'], # 'relative clause'
@@ -357,7 +363,7 @@ f.write(mapping[:-1])
 f.write('}')
 f.close()
 #%% Vectorize vocabulary
-# query_dir = '/Users/jyeaton/meta_analysis_raw2/pmcidList_5b8b0b5d716e703081119e1c9ddd6746/'
+# Manually list directories (it makes it easier if you run this step multiple times while customizing your vocabulary)
 query_dir = 'raw_data/pmcidList_132ba1648e0222ccee1e8ace8cf5b3c4/'
 vocab_dir = query_dir + 'subset_articlesWithCoords_extractedVocabulary/'
 data_dir = query_dir + 'subset_articlesWithCoords_extractedData'

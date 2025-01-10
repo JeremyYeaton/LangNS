@@ -17,13 +17,11 @@ import numpy as np
 from scipy import sparse
 import pandas as pd
 from nilearn import image
-from matplotlib import pyplot as plt
 
 try:
     from nilearn import maskers, plotting
 except ImportError:
     from nilearn import input_data as maskers
-from nilearn.plotting import view_img
 from nilearn.glm import fdr_threshold
 
 class LangNS:
@@ -118,5 +116,3 @@ class LangNS:
         def __init__(self):
             self.threshold = None
             self.img = None
-    
-#%%
