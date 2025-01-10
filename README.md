@@ -21,6 +21,10 @@ Once the files have been downloaded, extracted, and processed, the vocabulary wi
 
 If you want to run the basic NeuroSynth query tool in your browser, you can navigate to the folder containing your NeuroSynth maps in the command line and execute "flask run" which will allow you to interactively query the maps through a browser interface. You can also use query_LangNS.py to plot NeuroSynth maps onto the glass brain template from NiLearn.
 
+If you use this code, please cite [Yeaton (2025)](https://doi.org/10.31234/osf.io/xku24) and/or the [corresponding OSF repository](doi.org/10.17605/OSF.IO/2F9YC), as well as the [NeuroSynth reference paper](https://doi.org/10.1038/nmeth.1635).
+
+If you have any questions or run into any issues, feel free to contact me: jyeaton@uci.edu
+
 ### Query text (run 20 Nov. 2024)
 (language processing OR language development OR language acquisition OR autism OR ASD OR psycholinguistic OR neurolinguistic OR morphosyntax OR morphosyntactic OR syntax OR syntactic OR phonological OR phonology OR composition OR semantic OR morphological OR phonetic OR sentence OR phrase OR phonemic OR phrase structure OR aphasia OR dementia OR apraxia of speech OR speech OR dld OR sli OR alzheimer OR PPA) AND (language OR linguistic) AND (imaging OR MRI OR fnirs OR MEG OR voxel OR sEEG OR intracranial)
 
